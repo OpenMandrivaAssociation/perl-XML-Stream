@@ -1,6 +1,6 @@
 %define module 	XML-Stream
 %define version 1.22
-%define release 2mdk
+%define release %mkrel 3
 
 Summary:	%{module} perl module
 Name: 		perl-%{module}
@@ -26,6 +26,8 @@ is just that.  A stream of XML over a connection between two computers.
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor 
 %{__make}
+
+%check
 make test
 
 %install
