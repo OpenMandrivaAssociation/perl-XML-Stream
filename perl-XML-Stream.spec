@@ -1,6 +1,6 @@
 %define module 	XML-Stream
 %define version 1.22
-%define release %mkrel 5
+%define release %mkrel 6
 
 Summary:	%{module} perl module
 Name: 		perl-%{module}
