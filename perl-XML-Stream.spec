@@ -1,27 +1,27 @@
-%define module 	XML-Stream
-%define version 1.22
-%define release %mkrel 6
+%define upstream_name 	 XML-Stream
+%define upstream_version 1.22
 
-Summary:	%{module} perl module
-Name: 		perl-%{module}
-Version: 	%{version}
-Release: 	%{release}
+Name: 		perl-%{upstream_name}
+Version: 	%perl_convert_version %{upstream_version}
+Release: 	%mkrel 1
+
+Summary:	%{upstream_name} perl module
 License: 	LGPL
 Group:		Development/Perl
-Source0:	%{module}-%{version}.tar.bz2
 Url:		http://www.cpan.org/
-BuildRoot: 	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
-Buildrequires:	perl-devel
+Source0:	http://www.cpan.org/modules/by-module/XML/%{upstream_name}-%{upstream_version}.tar.bz2
+
 Buildrequires:	perl-Unicode-String
 BuildRequires:	perl-Authen-SASL
-BuildArch:	noarch
+BuildArch: noarch
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 This module provides you with access to XML Streams.  An XML Stream
 is just that.  A stream of XML over a connection between two computers.
 
 %prep
-%setup -q  -n %{module}-%{version}
+%setup -q  -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor 
@@ -42,4 +42,3 @@ rm -rf $RPM_BUILD_ROOT
 %doc README CHANGES
 %{_mandir}/*/*
 %{perl_vendorlib}/XML/*
-
