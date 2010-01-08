@@ -1,5 +1,5 @@
 %define upstream_name 	 XML-Stream
-%define upstream_version 1.22
+%define upstream_version 1.23
 
 Name: 		perl-%{upstream_name}
 Version: 	%perl_convert_version %{upstream_version}
@@ -9,7 +9,7 @@ Summary:	%{upstream_name} perl module
 License: 	LGPL
 Group:		Development/Perl
 Url:		http://www.cpan.org/
-Source0:	http://www.cpan.org/modules/by-module/XML/%{upstream_name}-%{upstream_version}.tar.bz2
+Source0:	http://www.cpan.org/modules/by-module/XML/%{upstream_name}-%{upstream_version}.tar.gz
 
 Buildrequires:	perl-Unicode-String
 BuildRequires:	perl-Authen-SASL
