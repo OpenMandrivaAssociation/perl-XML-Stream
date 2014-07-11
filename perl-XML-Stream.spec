@@ -4,7 +4,7 @@
 Summary:	%{modname} perl module
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	11
+Release:	12
 License:	LGPLv2
 Group:		Development/Perl
 Url:		http://www.cpan.org/
