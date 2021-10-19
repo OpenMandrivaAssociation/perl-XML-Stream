@@ -19,20 +19,20 @@ This module provides you with access to XML Streams.  An XML Stream
 is just that.  A stream of XML over a connection between two computers.
 
 %prep
-%setup -qn %{modname}-%{modver}
+%autosetup -p1 -n %{modname}-%{modver}
 
 %build
-%__perl Makefile.PL INSTALLDIRS=vendor 
-%make
+perl Makefile.PL INSTALLDIRS=vendor 
+%make_build
 
 %check
 make test
 
 %install
-%makeinstall_std
+%make_install
 
 %files
 %doc README CHANGES
 %{perl_vendorlib}/XML/*
-%{_mandir}/man3/*
+%doc %{_mandir}/man3/*
 
