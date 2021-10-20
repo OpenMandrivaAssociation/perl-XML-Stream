@@ -4,7 +4,7 @@
 Summary:	%{modname} perl module
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	17
+Release:	18
 License:	LGPLv2
 Group:		Development/Perl
 Url:		http://www.cpan.org/
@@ -13,6 +13,7 @@ BuildArch:	noarch
 BuildRequires:	perl-devel
 BuildRequires:	perl-Unicode-String
 BuildRequires:	perl-Authen-SASL
+BuildRequires:	perl(Test::More)
 
 %description
 This module provides you with access to XML Streams.  An XML Stream
@@ -35,4 +36,3 @@ make test
 %doc README CHANGES
 %{perl_vendorlib}/XML/*
 %doc %{_mandir}/man3/*
-
