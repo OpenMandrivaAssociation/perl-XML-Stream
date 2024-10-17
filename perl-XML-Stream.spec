@@ -7,7 +7,7 @@ Version:	%perl_convert_version %{modver}
 Release:	19
 License:	LGPLv2
 Group:		Development/Perl
-Url:		http://www.cpan.org/
+Url:		https://www.cpan.org/
 Source0:	http://www.cpan.org/modules/by-module/XML/%{modname}-%{modver}.tar.gz
 BuildArch:	noarch
 BuildRequires:	perl-devel
