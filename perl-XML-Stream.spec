@@ -1,14 +1,14 @@
 %define modname	XML-Stream
-%define modver	1.23
+%define modver	1.24
 
 Summary:	%{modname} perl module
 Name:		perl-%{modname}
-Version:	%perl_convert_version %{modver}
-Release:	19
+Version:	%{modver}
+Release:	1
 License:	LGPLv2
 Group:		Development/Perl
-Url:		https://www.cpan.org/
-Source0:	http://www.cpan.org/modules/by-module/XML/%{modname}-%{modver}.tar.gz
+Url:		https://github.com/dap/XML-Stream
+Source0:	https://cpan.metacpan.org/authors/id/D/DA/DAPATRICK/XML-Stream-%{modver}.tar.gz
 BuildArch:	noarch
 BuildRequires:	make
 BuildRequires:	perl-devel
